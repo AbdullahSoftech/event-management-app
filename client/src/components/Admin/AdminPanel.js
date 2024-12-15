@@ -13,7 +13,7 @@ const AdminPanel = () => {
     const fetchUsers = async () => {
       const token = localStorage.getItem('authToken'); 
       try {
-        const response = await axios.get('http://localhost:5000/api/auth/users-profiles', {
+        const response = await axios.get('https://event-management-api-seven.vercel.app/api/auth/users-profiles', {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`, // Ensure token is being added
