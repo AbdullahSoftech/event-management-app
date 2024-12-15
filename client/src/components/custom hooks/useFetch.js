@@ -11,7 +11,7 @@ const useFetch = (endpoint) => {
         setLoading(true);
         setError(null);
         try {
-            const response = await axios.get('http://localhost:5000/api/events');
+            const response = await axios.get('https://event-management-api-seven.vercel.app/api/events');
             setData(response.data);
         } catch (err) {
             setError(err.message || 'Failed to fetch data.');
