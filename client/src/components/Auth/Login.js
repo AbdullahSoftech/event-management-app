@@ -22,7 +22,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', formData);
+            const response = await axios.post('https://event-management-api-seven.vercel.app/api/auth/login', formData);
            
             const token = response.data.token;
             // Store the token in localStorage
