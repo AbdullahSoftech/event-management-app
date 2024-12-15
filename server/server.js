@@ -20,8 +20,13 @@ app.use(cors({
 connectDB()
 
 // Use the authentication and event routes
+app.get('/', (req, res) => {
+    res.send('Hello, World!')
+})
+
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
+
 
 // // Start the server
 const PORT = process.env.PORT || 5000;
