@@ -79,6 +79,14 @@ PORT=5000
 ```
 
 ### 3. **Frontend Setup**
+Go to **client folder** and replace the
+```bash
+https://event-management-app.vercel.app
+```
+everywhere it is used in react with this
+```bash
+http://localhost:5000
+```
 Navigate to the frontend folder:
 ```bash
 cd client
@@ -90,7 +98,7 @@ The frontend will start at `http://localhost:3000`.
 ---
 
 ## **Technologies Used**
-- **Frontend**: React, Tailwind CSS
+- **Frontend**: React, Tailwind CSS, axios, react-router-dom
 - **Backend**: Node.js, Express, JWT for authentication, bcrypt js for password encryption.
 - **Database**: MongoDB (Mongoose ODM)
 - **Other**: Git for version control, dotenv for environment variables
