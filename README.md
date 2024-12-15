@@ -9,7 +9,6 @@ A full-stack web application for managing events, including user registration, l
 - **Node.js** (v20.16.0 or later)
 - **npm** (v8.19.4 or later)
 - **Database**: MongoDB (for development or MongoDB Atlas for production)
-- **Optional**: PostgreSQL/MySQL if using Sequelize ORM
 - **JWT** for user authentication
 
 ---
@@ -31,11 +30,14 @@ A full-stack web application for managing events, including user registration, l
    - **View/Edit Profile**: Users can update their profile details (username, email).
    - **User Events**: Users can view all events they have created.
 
+4. **Admin**
+   - Admin User can edit any event.
+   - Admin can change the role of any user.
+
 ### **Bonus Features**
 - Pagination for event listings.
-- Search functionality to filter events by **title** or **location**.
+- Search functionality to filter events by **title** or **location** or **date** or **description**.
 - Role-Based Access Control (e.g., Admin can manage all events).
-- TypeScript implementation (work in progress).
 
 ---
 
@@ -43,8 +45,8 @@ A full-stack web application for managing events, including user registration, l
 
 ### 1. **Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/event-management-platform.git
-cd event-management-platform
+git clone [https://github.com/AbdullahSoftech/event-management-app.git](https://github.com/AbdullahSoftech/event-management-app.git)
+cd event-management-app
 ```
 
 ### 2. **Backend Setup**
@@ -52,7 +54,7 @@ Navigate to the backend folder:
 ```bash
 cd backend
 npm install
-npm run dev
+npm run start
 ```
 Make sure to configure your MongoDB connection string and JWT secret in the `.env` file:
 ```env
