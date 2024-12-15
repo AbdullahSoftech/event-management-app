@@ -45,14 +45,29 @@ A full-stack web application for managing events, including user registration, l
 
 ### 1. **Clone the Repository**
 ```bash
-git clone [https://github.com/AbdullahSoftech/event-management-app.git](https://github.com/AbdullahSoftech/event-management-app.git)
+git clone https://github.com/AbdullahSoftech/event-management-app.git
 cd event-management-app
 ```
 
 ### 2. **Backend Setup**
+Go to **app.js**, replace this
+```bash
+app.use(cors({
+    origin: 'https://event-management-app.vercel.app',
+    credentials: true
+}))
+```
+with this
+
+```bash
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true
+}))
+```
 Navigate to the backend folder:
 ```bash
-cd backend
+cd server
 npm install
 npm run start
 ```
@@ -66,7 +81,7 @@ PORT=5000
 ### 3. **Frontend Setup**
 Navigate to the frontend folder:
 ```bash
-cd frontend
+cd client
 npm install
 npm start
 ```
@@ -75,77 +90,30 @@ The frontend will start at `http://localhost:3000`.
 ---
 
 ## **Technologies Used**
-- **Frontend**: React, Material-UI/Bootstrap, TypeScript (optional)
-- **Backend**: Node.js, Express, JWT for authentication
-- **Database**: MongoDB (Mongoose ODM) / PostgreSQL/MySQL (if using Sequelize ORM)
+- **Frontend**: React, Tailwind CSS
+- **Backend**: Node.js, Express, JWT for authentication, bcrypt js for password encryption.
+- **Database**: MongoDB (Mongoose ODM)
 - **Other**: Git for version control, dotenv for environment variables
 
 ---
 
-## **Folder Structure**
-```bash
-event-management-platform/
-│
-├── backend/
-│   ├── config/        # Configuration files (DB, JWT, etc.)
-│   ├── controllers/   # Controller logic
-│   ├── models/        # Mongoose/Sequelize models
-│   ├── routes/        # API routes
-│   ├── middleware/    # Auth middleware
-│   ├── .env           # Environment variables
-│   ├── server.js      # Backend entry point
-│
-├── frontend/
-│   ├── src/
-│       ├── components/ # React components
-│       ├── pages/      # Pages like Login, Dashboard, Profile
-│       ├── services/   # API calls
-│       ├── App.js      # Main React entry point
-│
-└── README.md          # Documentation
-```
-
----
-
-## **Bonus Implementation**
-- **Pagination**: Efficiently paginates event lists.
-- **Search Functionality**: Users can search for events by title or location.
-- **Role-Based Access**: Admin users can manage all events.
-
----
-
-## **How to Contribute**
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature-name`.
-3. Commit your changes: `git commit -m "Add new feature"`.
-4. Push to your branch: `git push origin feature-name`.
-5. Open a pull request.
-
----
-
 ## **Deployment**
-The application can be deployed to platforms like:
-- **Backend**: Heroku, Render
-- **Frontend**: Vercel, Netlify
+The application is deployed:
+- **Backend**: Vercel
+- **Frontend**: Vercel
 
 ---
 
 ## **Future Improvements**
 - Implement unit and integration testing.
-- Enhance search filters.
 - Full TypeScript support.
-
----
-
-## **License**
-This project is licensed under the MIT License.
 
 ---
 
 ### **Contact**
 If you have any questions or suggestions, feel free to reach out via:
-- **GitHub**: [Your GitHub Profile](https://github.com/yourusername)
-- **Email**: your-email@example.com
+- **GitHub**: https://github.com/AbdullahSoftech
+- **Email**: abdullah.softech.com
 
 ---
 
