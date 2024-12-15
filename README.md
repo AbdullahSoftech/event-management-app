@@ -110,6 +110,8 @@ The application is deployed:
 - **Backend**: Vercel
 - **Frontend**: Vercel
 
+![Application Screenshot](client/src/assets/my-app.jpg)
+
 ---
 
 ## **Future Improvements**
