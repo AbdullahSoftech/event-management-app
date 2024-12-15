@@ -123,7 +123,7 @@ The application is deployed:
 ### **Contact**
 If you have any questions or suggestions, feel free to reach out via:
 - **GitHub**: https://github.com/AbdullahSoftech
-- **Email**: abdullah.softech.com
+- **Email**: abdullah.softech@gmail.com
 
 ---
 
